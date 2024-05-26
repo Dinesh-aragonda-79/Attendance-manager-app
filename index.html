@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#6200ea">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Attendance Manager</h1>
+            <p>"Keep track of your attendance effortlessly and stay on top of your classes."</p>
+        </header>
+        <div class="form-group">
+            <input type="text" id="subjectName" placeholder="Enter Subject Name">
+            <button onclick="addSubject()">Add Subject</button>
+        </div>
+        <div id="subjectsContainer"></div>
+    </div>
+    
+    <!-- Modal for editing attendance -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Edit Attendance</h2>
+            <div class="modal-form-group">
+                <label for="editPresent">Present Classes:</label>
+                <input type="number" id="editPresent" min="0">
+            </div>
+            <div class="modal-form-group">
+                <label for="editTotal">Total Classes:</label>
+                <input type="number" id="editTotal" min="0">
+            </div>
+            <button onclick="updateAttendance()">Update</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+/* Dark Theme */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0d0d0d;
+    color: #ffffff;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+header {
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+header p {
+    font-size: 1.2em;
+    margin: 10px 0 20px 0;
+    color: #bbb;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+input[type="text"] {
+    width: 60%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+input[type="text"]:focus {
+    transform: scale(1.05);
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6200ea;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #3700b3;
+    transform: scale(1.1);
+}
+
+.subject {
+    background-color: #2c2c2c;
+    padding: 20px;
+    border: 1px solid #444;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.subject h3 {
+    margin: 0 0 10px 0;
+}
+
+.subject .attendance {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.subject .attendance button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.subject .attendance button:hover {
+    transform: scale(1.1);
+}
+
+.present {
+    background-color: #28a745;
+    color: white;
+}
+
+.absent {
+    background-color: #dc3545;
+    color: white;
+}
+
+.subject .stats {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.subject .edit-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.subject .edit-buttons button {
+    background-color: #007bff;
+}
+
+.subject .edit-buttons button:hover {
+    background-color: #0056b3;
+}
+
+.subject .delete {
+    background-color: #dc3545;
+}
+
+.subject .delete:hover {
+    background-color: #a71d2a;
+}
+
+/* Modal styles */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.7); 
+    animation: fadeInModal 0.5s ease-in-out;
+}
+
+@keyframes fadeInModal {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background-color: #2c2c2c;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: left;
+    animation: slideDown 0.5s ease-in-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-form-group {
+    margin: 15px 0;
+}
+
+.modal-form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.modal-form-group input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.modal-form-group input[type="number"]:focus {
+    transform: scale(1.05);
+}
+
+.modal button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6200ea;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.modal button:hover {
+    background-color: #3700b3;
+    transform: scale(1.1);
+}
